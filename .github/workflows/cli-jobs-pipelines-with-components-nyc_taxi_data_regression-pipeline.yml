@@ -9,7 +9,7 @@ on:
       - sdk-preview
     paths:
       - cli/jobs/pipelines/nyc-taxi/**
-      - .github/workflows/cli-jobs-pipelines-nyc-taxi-pipeline.yml
+      - cli-jobs-pipelines-with-components-nyc_taxi_data_regression-pipeline.yml
       - cli/run-pipeline-jobs.sh
       - cli/setup.sh
 jobs:
