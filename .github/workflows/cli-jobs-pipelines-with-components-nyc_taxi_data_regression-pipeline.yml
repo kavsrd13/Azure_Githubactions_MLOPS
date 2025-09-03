@@ -9,7 +9,7 @@ on:
       - sdk-preview
     paths:
       - cli/jobs/pipelines/nyc-taxi/**
-      - cli-jobs-pipelines-with-components-nyc_taxi_data_regression-pipeline.yml
+      - .github/workflows/cli-jobs-pipelines-nyc-taxi-pipeline.yml
       - cli/run-pipeline-jobs.sh
       - cli/setup.sh
 jobs:
@@ -21,7 +21,7 @@ jobs:
     - name: azure login
       uses: azure/login@v2
       with:
-        creds: ${{secrets.AZURE_CREDENTIALS}}
+          creds: ${{secrets.AZURE_CREDENTIALS}}
     - name: setup
       run: bash setup.sh
       working-directory: cli
