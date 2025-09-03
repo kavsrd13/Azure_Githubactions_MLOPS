@@ -1,4 +1,4 @@
-name: cli-jobs-pipelines-nyc-taxi-pipeline
+name: cli-jobs-pipelines-with-components-nyc_taxi_data_regression-pipeline.yml
 on:
   workflow_dispatch:
   schedule:
