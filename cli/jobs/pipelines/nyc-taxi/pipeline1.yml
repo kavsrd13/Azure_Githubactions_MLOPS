@@ -110,18 +110,6 @@ jobs:
       python deploy.py 
       --model_input ${{inputs.model_input}}
       
-  monitor_job:
-    type: command
-    inputs:
-      baseline_data: ${{parent.jobs.transform_job.outputs.transformed_data}}
-      production_data: azureml:your_production_data_datastore
-    code: src/monitor
-    environment: azureml://registries/azureml/environments/sklearn-1.5/labels/latest
-    compute: azureml:cpu-cluster
-    command: >-
-      python monitor.py 
-      --baseline_data ${{inputs.baseline_data}}
-      --production_data ${{inputs.production_data}}
 
 
 
